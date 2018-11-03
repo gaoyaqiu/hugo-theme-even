@@ -10,7 +10,7 @@ categories:
 
 # ===== footer =====
 powered:
-  other: "由 %s 强力驱动"
+  other: ""
 
 theme:
   other: "主题"
