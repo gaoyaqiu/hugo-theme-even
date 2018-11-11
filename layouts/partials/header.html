@@ -15,10 +15,29 @@
         <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
       </li>
     {{- end }}
-    <li class="menu-item">
-    <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-            <span class="hidden-sm hidden-md hidden-lg">Search</span> <span id="searchGlyph" class="glyphicon glyphicon-search"></span>
-            </a>
-    </li>
+    {{ if isset .Site.Params "algolia" }}
+        <li class="menu-item">
+        <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+            <span class="hidden-sm hidden-md hidden-lg">{{ i18n "gcseLabelShort" }}</span> <span id="searchGlyph" class="glyphicon glyphicon-search"></span> 
+        </a>
+        </li>
+    {{ end }}
   </ul>
 </nav>
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+<div id="modalSearch" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Search www.gaoyaqiu.com</h4>
+        </div>
+        <div class="modal-body">
+            {{ partial "search.html" . }}
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+        </div>
+        </div>
+    </div>
+</div>
