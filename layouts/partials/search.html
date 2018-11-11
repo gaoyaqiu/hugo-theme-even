@@ -15,8 +15,8 @@ autocomplete('#aa-search-input',
     displayKey: 'name',
     templates: {
         suggestion: function(suggestion) {
-            console.log(suggestion);
-            return '<span>' + '<a href="/post/' + suggestion.slug + '">' +
+            // console.log(suggestion);
+            return '<span>' + '<a href="/' + suggestion.uri + '">' +
             suggestion._highlightResult.title.value + '</a></span>';
         }
     }
