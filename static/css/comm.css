@@ -1,7 +1,12 @@
-body {
-    font-family: Microsoft Yahei,arial !important;
-    font-size: 16px !important;
-}
+.modal-backdrop{
+        position:static;
+        top: -5px ;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1040;
+        background-color: #000;
+} 
 a {
     color: #34495e!important;
     text-decoration: none!important;
@@ -10,5 +15,6 @@ a:hover{
     color: #38a7bb!important;
     text-decoration: none!important;
 }
-
-.modal-backdrop{z-index:0!important;}
+body{
+    color: #34495e!important;
+}
