@@ -35,7 +35,7 @@ function ZanShang(){
     this.zsbtn.each(function(el){
       $(this).on('click',function(){
         var num = $(this).attr('data-num'); //按钮的对应的数字
-        var type = $('.zs-type:radio:checked').val();//付款方式
+        var type = $("input[name='zs-type']:checked").val(); //付款方式
         //根据不同付款方式和选择对应的按钮的数字来生成对应的二维码图片，你可以自定义这个图片的路径，默认放在当前images目录中
         var src = '/img/'+type+'-'+num+'.png';
         var text = $(this).html();
