@@ -11,7 +11,6 @@
     <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
   {{- end }}
 </div>
-
 <div class="copyright">
   <span class="power-by">
         <a href="http://gohugo.io">Hugo v{{ .Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; 
@@ -19,7 +18,6 @@
   <span class="theme-info">
         Theme by <a href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
-
   {{ if .Site.Params.busuanzi.enable -}}
   <div class="busuanzi-footer">
     {{ $spinner := "img/spinner.svg" | relURL -}}
@@ -34,7 +32,6 @@
     {{- end }}
   </div>
   {{- end }}
-
   <span class="copyright-year">
     {{- $current := now.Format "2006" }}
     &copy; 
