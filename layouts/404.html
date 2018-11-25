@@ -1,18 +1,54 @@
 {{ define "title" }}404 page not found - {{ .Site.Title }}{{ end }}
-
 {{ define "content" }}
+<style>
+.not-found {
+    text-align: center;
+    margin-top: 100px;
+}
+.page-404 .wrapper {
+    background-image: url(https://dn-coding-net-production-static.codehub.cn/static/media/404@2x.47b05c7c.png);
+}
+.wrapper {
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 230px;
+    padding-right: 150px;
+}
+h1 {
+    color: #4f565f;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+}
+.summary {
+    color: #76808e;
+    font-size: 24px;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+.button {
+    border: 1px solid #323a45;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    height: 48px;
+    line-height: 46px;
+    outline: none;
+    padding: 0 30px;
+    transition: all .1s ease;
+}
+</style>
 <div class="not-found">
-  <h1 class="error-emoji"></h1>
-  <p class="error-text">/* 404 page not found. */</p>
-  <p class="error-link"><a href="{{ "/" | relLangURL }}">↑ Back Home ↑</a></p>
+    <div class="page page-404">
+        <div class="wrapper">
+            <h1>404!</h1>
+            <p class="summary">页面，我找不到你，我找不到你啊～</p>
+            <a class="button" href="{{ "/" | relLangURL }}">返回首页</a>
+        </div>
+    </div>
 </div>
-<script>
-  var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
-  var emojiArray = [
-    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
-    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
-  ];
-  var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
-  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
-</script>
+
 {{ end }}
