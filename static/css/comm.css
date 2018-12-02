@@ -11,11 +11,10 @@ a {
     color: #34495e!important;
     text-decoration: none!important;
 }
-a:hover{
+a:focus, a:hover{
     color: #38a7bb!important;
     text-decoration: none!important;
 }
-
 .container {
     margin: 0 auto;
     width: 900px;
