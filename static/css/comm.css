@@ -11,6 +11,9 @@ a {
     color: #34495e!important;
     text-decoration: none!important;
 }
+.read-more a {
+    color: #38a7bb!important;
+}
 a:focus, a:hover{
     color: #38a7bb!important;
     text-decoration: none!important;
